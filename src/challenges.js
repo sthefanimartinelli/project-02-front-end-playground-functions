@@ -114,11 +114,21 @@ function decode(stringLetrasNumeros) {
     }
 
   }   return newString.join('');
-} 
+}
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrayTech, nameUser) {
+  if (arrayTech.length !== 0) {   
+    let arrayTechSorted = arrayTech.sort();
+    let list = [];
+
+    for (let index = 0; index < arrayTechSorted.length; index += 1) {
+      let result = {'tech': arrayTechSorted[index], 'name': nameUser};
+      list.push(result);
+
+    } return list;
+    
+  } return 'Vazio!'; 
 }
 
 module.exports = {
