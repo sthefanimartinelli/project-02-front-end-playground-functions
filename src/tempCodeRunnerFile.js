@@ -1,5 +1,5 @@
-function calcArea(base, height) {
-  return (base * height) / 2; 
+// Desafio 3
+function splitSentence(frase) {
+  frase = 'estou pronta para ir'
+  console.log(frase.split(''));
 }
-
-console.log(calcArea(10,50));
