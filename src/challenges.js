@@ -1,13 +1,13 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if (param1 === true && param2 === true){
+  if (param1 === true && param2 === true) {
     return true;
   } return false;
-} 
+}
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2; 
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -17,7 +17,7 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(arrayStrings) {
-  let concatString = arrayStrings[arrayStrings.length - 1] + ', ' + arrayStrings[0];
+  let concatString = `${arrayStrings[arrayStrings.length - 1]}, ${arrayStrings[0]}`;
   return concatString;
 }
 
@@ -28,9 +28,8 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  
-  let biggestNumber = array[0]
-  for (let index = 1; index < array.length; index += 1){
+  let biggestNumber = array[0];
+  for (let index = 1; index < array.length; index += 1) {
     if (array[index] > biggestNumber) {
       biggestNumber = array[index];
     }
@@ -38,7 +37,7 @@ function highestCount(array) {
 
   let highestCount = 0;
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] === biggestNumber){
+    if (array[index] === biggestNumber) {
       highestCount += 1;
     }
   }
@@ -47,9 +46,9 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mousePosition, cat1Position, cat2Position) {
-  if (Math.abs(cat1Position - mousePosition) > Math.abs(cat2Position - mousePosition)){
+  if (Math.abs(cat1Position - mousePosition) > Math.abs(cat2Position - mousePosition)) {
     return 'cat2';
-  } else if (Math.abs(cat2Position - mousePosition) > Math.abs(cat1Position - mousePosition)) {
+  } if (Math.abs(cat2Position - mousePosition) > Math.abs(cat1Position - mousePosition)) {
     return 'cat1';
   } return 'os gatos trombam e o rato foge';
 }
@@ -67,8 +66,7 @@ function fizzBuzz(array) {
     } else {
       newArray.push('bug!');
     }
-}     return newArray;
-
+  } return newArray;
 }
 
 // Desafio 9
@@ -77,21 +75,20 @@ function encode(string) {
   let newString = [];
 
   for (let index = 0; index < stringArray.length; index += 1) {
-    if (stringArray[index] === 'a'){
+    if (stringArray[index] === 'a') {
       newString.push('1');
-    } else if (stringArray[index] === 'e'){
+    } else if (stringArray[index] === 'e') {
       newString.push('2');
-    } else if (stringArray[index] === 'i'){
+    } else if (stringArray[index] === 'i') {
       newString.push('3');
-    } else if (stringArray[index] === 'o'){
+    } else if (stringArray[index] === 'o') {
       newString.push('4');
-    } else if (stringArray[index] === 'u'){
+    } else if (stringArray[index] === 'u') {
       newString.push('5');
     } else {
-      newString.push(stringArray[index])
+      newString.push(stringArray[index]);
     }
-
-  }   return newString.join('');
+  } return newString.join('');
 }
 
 function decode(stringLetrasNumeros) {
@@ -99,36 +96,33 @@ function decode(stringLetrasNumeros) {
   let newString = [];
 
   for (let index = 0; index < stringArray.length; index += 1) {
-    if (stringArray[index] == 1){
+    if (stringArray[index] == 1) {
       newString.push('a');
-    } else if (stringArray[index] == 2){
+    } else if (stringArray[index] == 2) {
       newString.push('e');
-    } else if (stringArray[index] == 3){
+    } else if (stringArray[index] == 3) {
       newString.push('i');
-    } else if (stringArray[index] == 4){
+    } else if (stringArray[index] == 4) {
       newString.push('o');
-    } else if (stringArray[index] == 5){
+    } else if (stringArray[index] == 5) {
       newString.push('u');
     } else {
-      newString.push(stringArray[index])
+      newString.push(stringArray[index]);
     }
-
-  }   return newString.join('');
+  } return newString.join('');
 }
 
 // Desafio 10
 function techList(arrayTech, nameUser) {
-  if (arrayTech.length !== 0) {   
+  if (arrayTech.length !== 0) {
     let arrayTechSorted = arrayTech.sort();
     let list = [];
 
     for (let index = 0; index < arrayTechSorted.length; index += 1) {
-      let result = {'tech': arrayTechSorted[index], 'name': nameUser};
+      let result = { tech: arrayTechSorted[index], name: nameUser };
       list.push(result);
-
     } return list;
-    
-  } return 'Vazio!'; 
+  } return 'Vazio!';
 }
 
 module.exports = {
