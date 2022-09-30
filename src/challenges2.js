@@ -59,9 +59,22 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(string) {
+  let stringArray = string.split('');
+  let sum = 0;
+
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] == 1 || string[index] == 2 || string[index] == 3 || string[index] == 4 || string[index] == 5 || string[index] == 6 || string[index] == 7 || string[index] == 8 || string[index] == 9) {
+      let indexAtual = parseInt(string[index]);
+      sum = sum + indexAtual;
+    }
+  }
+  
+  if (sum == 1) {
+    return sum + ' copo de água'
+  } return sum + ' copos de água'
+
+} console.log(hydrate('7 cachaça, 8 cervejas e 9 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
