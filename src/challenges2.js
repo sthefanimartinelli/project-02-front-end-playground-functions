@@ -4,7 +4,7 @@ function generatePhoneNumber(array) {
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  
+
   for (let key in array) {
     if (array[key] < 0 || array[key] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
@@ -44,11 +44,18 @@ function generatePhoneNumber(array) {
   } return numeroTelefone;
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 4, 4, 5, 6, 7, 8, 1]));
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let isTriangle = true;
+
+  let requisito1 = (lineA >= lineB + lineC || lineB >= lineA + lineC || lineC >= lineA + lineB);
+
+  let requisito2 = (lineA <= Math.abs(lineB - lineC) || lineB <= Math.abs(lineA - lineC) || lineC <= Math.abs(lineA - lineB));
+
+  if (requisito1 === true || requisito2 === true) {
+    isTriangle = false;
+  }
+  return isTriangle;     
 }
 
 // Desafio 13
